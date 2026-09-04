@@ -65,5 +65,9 @@ function editNote(index){let note=notes[index];document.getElementById("subject"
 function deleteNote(index){if(confirm("Delete this note?")){notes.splice(index,1);localStorage.setItem("studyNotes",JSON.stringify(notes));displayNotes()}}
 displayNotes();
 </script>
-</body>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script></body>
 </html>
